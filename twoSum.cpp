@@ -12,7 +12,7 @@ int main() {
 
   cin >> target >> n;
 
-  for(int i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++) {
     int a;
     cin >> a;
     num.push_back(a);
@@ -23,12 +23,12 @@ int main() {
 
   map<int, int> indexes;
   for (int i = 0; i < num.size(); i++) {
-    if(indexes.contains(num[i])) {
+    if (indexes.contains(num[i])) {
       i1 = i;
       i2 = indexes[num[i]];
       break;
     }
-    indexes.insert({target-num[i], i});
+    indexes.insert({target - num[i], i});
   }
 
   cout << i1 << " " << i2;

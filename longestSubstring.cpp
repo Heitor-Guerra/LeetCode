@@ -10,8 +10,8 @@ int main() {
   int beg = 0, end = 0;
   unordered_map<char, bool> isPresent;
   int n = 0;
-  while(end < s.length()) {
-    if(isPresent[s[end]]) {
+  while (end < s.length()) {
+    if (isPresent[s[end]]) {
       isPresent[s[beg]] = false;
       beg++;
     } else {
@@ -19,7 +19,7 @@ int main() {
       end++;
     }
 
-    if(end - beg > n) {
+    if (end - beg > n) {
       n = end - beg;
     }
   }
